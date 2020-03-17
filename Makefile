@@ -1,7 +1,12 @@
+P=hellosdl
+CFLAGS=-g --std=c99 -Wall `pkg-config --cflags sdl2`
+LDLIBS=`pkg-config --libs sdl2`
+OBJECTS=main.c
+CC=gcc
 
 
 hellosdl:
-	gcc -g --std=c99 -Wall main.c -o hellosdl -I include -L lib -lSDL2-2.0.0
+	$(CC) $(CFLAGS) -o $(P) $(LDLIBS) $(OBJECTS)
 
 clean:
 	rm hellosdl

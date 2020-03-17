@@ -103,11 +103,22 @@ int main(int argc, char *args[])
             //Apply the image
             SDL_BlitSurface(gHelloWorld, NULL, gScreenSurface, NULL);
             SDL_Event e;
-            SDL_PollEvent(&e);
-            //Update the surface
-            SDL_UpdateWindowSurface(gWindow);
-            //Wait two seconds
-            SDL_Delay(20000);
+
+            bool quit = false;
+            while (!quit)
+            {
+                while (SDL_PollEvent(&e) != 0)
+                {
+                    if (e.type == SDL_QUIT)
+                    {
+                        quit = true;
+                    }
+                }
+
+                //Update the surface
+                SDL_UpdateWindowSurface(gWindow);
+                //Wait two seconds
+            }
         }
     }
 
