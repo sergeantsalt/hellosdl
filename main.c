@@ -1,3 +1,10 @@
+/** @mainpage main.c
+ * @brief This is the brief description of main.c
+ * 
+ * @section purpose Purpose/Overview
+ * The purpose of this paragraph is to explain the app.
+ * */
+
 #include <stdio.h>
 #include <stdbool.h>
 #include <SDL2/SDL.h>
@@ -6,7 +13,10 @@
 const int SCREEN_WIDTH = 640;
 const int SCREEN_HEIGHT = 480;
 
-//Starts up SDL and creates window
+/** Starts up SDL and creates window
+ * @return success
+ * 
+ * */
 bool init();
 
 //Loads media
