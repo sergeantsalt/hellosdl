@@ -9,4 +9,4 @@ hellosdl:
 	$(CC) $(CFLAGS) -o $(P) $(LDLIBS) $(OBJECTS)
 
 clean:
-	rm hellosdl
+	rm $(P)
